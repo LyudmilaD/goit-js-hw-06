@@ -51,7 +51,9 @@ function createBoxes() {
 
 destroyBtn.addEventListener('click', destroyBoxes);
 function destroyBoxes() {
-  boxesContainer.remove();
+  while (boxesContainer.firstChild) {
+    boxesContainer.firstChild.remove();
+  }
   return;
 }
 
